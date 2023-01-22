@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 130%;
   }
 
   html {
@@ -25,5 +26,11 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0 16rem;
     margin: 0 auto;
     background-color: var(--background);
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding: 2rem;
+    }
   }
 `;
