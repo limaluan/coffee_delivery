@@ -6,10 +6,11 @@ export function Home() {
       <section>
         <h1>Encontre o café perfeito para qualquer hora do dia</h1>
         <p>
-          Com o Coffee Delivery você recebe seu café onde estiver, a <br />
-          qualquer hora
+          Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
+          hora
         </p>
 
+        <img className="coffee mobile-only" src="./src/assets/coffee.svg" alt="Coffee" />
         <div className="items">
           <div className="item">
             <img src="./src/assets/cart_circle_icon.svg" alt="" />
@@ -29,7 +30,8 @@ export function Home() {
           </div>
         </div>
       </section>
-      <img className="coffee" src="./src/assets/coffee.svg" alt="Coffee" />
+
+      <img className="coffee desktop-only" src="./src/assets/coffee.svg" alt="Coffee" />
     </HomeContainer>
   );
 }

@@ -23,14 +23,14 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   body {
-    padding: 0 16rem;
+    max-width: 80vw;
     margin: 0 auto;
     background-color: var(--background);
   }
   
   @media (max-width: 768px) {
     body {
-      padding: 2rem;
+      padding: 0 2rem;
     }
   }
 `;
