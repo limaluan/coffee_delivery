@@ -8,6 +8,9 @@ export const HomeContainer = styled.main`
   align-items: center;
   height: calc(100vh - 20rem);
 
+  max-width: 80vw;
+  margin: 0 auto;
+
   section {
     display: flex;
     flex-direction: column;

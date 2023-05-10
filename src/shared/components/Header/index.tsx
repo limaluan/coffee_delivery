@@ -1,8 +1,8 @@
-import { HeaderContainer } from "./Header.styles";
+import { HeaderContainer } from "./styles";
 
-import cartIcon from "../../assets/cart_icon.svg";
-import gpsIcon from "../../assets/gps_icon_full.svg";
-import logoImg from "../../assets/logo.svg"
+import cartIcon from "../../../assets/cart_icon.svg";
+import gpsIcon from "../../../assets/gps_icon_full.svg";
+import logoImg from "../../../assets/logo.svg";
 
 export function Header() {
   return (

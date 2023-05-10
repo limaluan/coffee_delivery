@@ -5,6 +5,9 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
 
+  max-width: 80vw;
+  margin: 0 auto;
+
   height: 10rem;
 
   .logo {

@@ -1,4 +1,4 @@
-import { HomeContainer } from "./Home.styles";
+import { HomeContainer } from "./styles";
 
 import cartIcon from "../../assets/cart_circle_icon.svg";
 import boxIcon from "../../assets/box_icon.svg";

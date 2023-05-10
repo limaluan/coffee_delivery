@@ -23,8 +23,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   body {
-    max-width: 80vw;
-    margin: 0 auto;
+    /* max-width: 80vw;
+    margin: 0 auto; */
     background-color: var(--background);
   }
   
