@@ -8,6 +8,12 @@ export const GlobalStyles = createGlobalStyle`
     --purple-dark: #4B2995;
     --yellow-light: #F1E9C9;
     --yellow-dark: #C47F17;
+
+    --black-300: #574F4D;
+    
+    --card: #F3F2F2;
+    --label: #8D8686;
+    --button: #E6E5E5;
   }
 
   * {
@@ -17,6 +23,10 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 130%;
   }
 
+  button {
+    all: unset;
+  }
+  
   html {
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;

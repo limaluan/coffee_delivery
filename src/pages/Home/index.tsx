@@ -5,9 +5,11 @@ import boxIcon from "../../assets/box_icon.svg";
 import timeIcon from "../../assets/time_icon.svg";
 import coffeeIcon from "../../assets/coffee_icon.svg";
 import coffeeImg from "../../assets/coffee.svg";
+import { OurCoffees } from "../OurCoffees";
 
 export function Home() {
   return (
+    <>
     <HomeContainer>
       <section>
         <h1>Encontre o café perfeito para qualquer hora do dia</h1>
@@ -39,5 +41,7 @@ export function Home() {
 
       <img className="coffee desktop-only" src={coffeeImg} alt="Coffee" />
     </HomeContainer>
+    <OurCoffees />
+    </>
   );
 }

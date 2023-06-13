@@ -8,6 +8,7 @@ export const HomeContainer = styled.main`
   align-items: center;
   height: calc(100vh - 20rem);
 
+  /* Pattern */
   max-width: 80vw;
   margin: 0 auto;
 
@@ -53,6 +54,28 @@ export const HomeContainer = styled.main`
 
   .coffee.mobile-only {
     display: none;
+  }
+
+  @media (max-width: 1024px) {
+    gap: 0rem;
+    height: fit-content;
+    margin: 10rem auto;
+
+    section {
+      text-align: center;
+      width: 100%;
+    }
+
+    .coffee.desktop-only {
+      display: none;
+    }
+
+    .coffee.mobile-only {
+      display: block;
+
+      margin-top: 4rem;
+      height: 36rem;
+    }
   }
 
   @media (max-width: 768px) {
