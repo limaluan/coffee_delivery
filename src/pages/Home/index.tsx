@@ -5,7 +5,7 @@ import boxIcon from "../../assets/box_icon.svg";
 import timeIcon from "../../assets/time_icon.svg";
 import coffeeIcon from "../../assets/coffee_icon.svg";
 import coffeeImg from "../../assets/coffee.svg";
-import { OurCoffees } from "../OurCoffees";
+import { OurCoffees } from "../../shared/components/OurCoffees";
 
 export function Home() {
   return (

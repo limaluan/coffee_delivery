@@ -1,13 +1,10 @@
 import { CoffeeCardContainer } from "./styles";
 
-import CoffeePlaceholderImg from "../../assets/coffee_placeholder.svg";
-import CartImg from "../../assets/cart_icon.svg";
-import { useState } from "react";
+import CoffeePlaceholderImg from "../../../assets/coffee_placeholder.svg";
+import CartImg from "../../../assets/cart_icon.svg";
+import { Counter } from "../Counter";
 
 export function CoffeeCard() {
-
-  const [ itemsAmount, setItemsAmount ] = useState(1);
-  
   return (
     <CoffeeCardContainer>
       <img
@@ -29,21 +26,11 @@ export function CoffeeCard() {
           </p>
 
           <div className="coffee-quantity">
-            <div className="quantity">
-              <button onClick={() => itemsAmount >= 2 && setItemsAmount(oldAmount => oldAmount - 1)}>
-                <span>-</span>
-              </button>
-              
-              <span>{itemsAmount}</span>
-
-              <button onClick={() => setItemsAmount(oldAmount => oldAmount + 1)}><span>+</span></button>
-            </div>
-            
-            <button className="cart-button" onClick={() => console.log(itemsAmount)}>
+            <Counter />
+            <button className="cart-button">
               <img src={CartImg} alt="Carrinho de Compra" />
             </button>
           </div>
-
         </div>
       </div>
     </CoffeeCardContainer>

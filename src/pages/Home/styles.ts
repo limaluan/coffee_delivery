@@ -21,7 +21,6 @@ export const HomeContainer = styled.main`
 
   h1 {
     font-size: 4.8rem;
-    font-family: "Baloo 2", cursive;
     font-weight: 800;
   }
 
