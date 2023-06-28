@@ -5,6 +5,8 @@ export const CheckoutContainer = styled.main`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
+  padding-bottom: 10rem;
 
   input {
     all: unset;
@@ -40,6 +42,10 @@ export const CheckoutContainer = styled.main`
     gap: 2rem;
 
     padding: 2rem 1rem;
+  }
+
+  .address-container {
+    max-width: 73rem;
   }
 
   .payment-methods {
@@ -212,12 +218,16 @@ export const CheckoutContainer = styled.main`
     text-align: center;
     border-radius: 6px;
     margin-top: 2.4rem;
+
+    &:hover {
+      background-color: var(--yellow-dark);
+      transition: background-color 75ms;
+    }
   }
 
   @media (min-width: 768px) {
-    width: 80vw;
-    max-width: 1280px;
-    margin: auto;
+    max-width: 80vw;
+    margin: 0 auto;
 
     .payment-methods {
       flex-direction: row;
@@ -262,6 +272,6 @@ export const CheckoutContainer = styled.main`
   }
 
   @media (min-width: 1280px) {
-    gap: 10rem;
+    justify-content: space-between;
   }
 `;

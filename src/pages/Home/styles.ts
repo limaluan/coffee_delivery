@@ -79,6 +79,7 @@ export const HomeContainer = styled.main`
 
   @media (max-width: 768px) {
     height: fit-content;
+    margin: 0 auto 5rem auto;
 
     section {
       text-align: center;
@@ -93,6 +94,7 @@ export const HomeContainer = styled.main`
 
     .coffee.mobile-only {
       display: block;
+      margin: 0;
     }
 
     .coffee.desktop-only {

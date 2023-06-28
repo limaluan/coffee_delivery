@@ -4,6 +4,7 @@ export const OurCoffeesContainer = styled.section`
   /* Pattern */
   max-width: 80vw;
   margin: 0 auto;
+  margin-bottom: 10rem;
 
   display: flex;
   flex-direction: column;
