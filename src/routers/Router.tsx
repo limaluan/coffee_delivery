@@ -2,10 +2,11 @@ import { Routes, Route } from "react-router-dom";
 
 import { Home } from "../pages/Home";
 import { DefaultLayout } from "../shared/layouts/DefaultLayout";
-import { Admin } from "../pages/Admin";
 import { Login } from "../pages/Login";
-import { PrivateRoute } from "./PrivateRoute";
 import { Checkout } from "../pages/Checkout";
+import { AdminLayout } from "../shared/layouts/AdminLayout";
+import { Orders } from "../pages/Admin/Orders";
+import { Admin } from "../pages/Admin";
 
 export function Router() {
   return (
@@ -18,14 +19,10 @@ export function Router() {
 
       {/* Admin */}
       <Route path="/login" element={<Login />} />
-      <Route
-        path="/admin"
-        element={
-          <PrivateRoute redirectPath="login">
-            <Admin />
-          </PrivateRoute>
-        }
-      />
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/pedidos" element={<Orders />} />
+      </Route>
     </Routes>
   );
 }

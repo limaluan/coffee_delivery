@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     --yellow-light: #F1E9C9;
 
     --black-300: #574F4D;
-  
+
     --subtitle: #403937;
     --card: #F3F2F2;
     --label: #8D8686;
@@ -24,8 +24,14 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     line-height: 130%;
+    list-style: none;
   }
 
+  a {
+    all: unset;
+    cursor: pointer;
+  }
+  
   button {
     all: unset;
     cursor: pointer;
