@@ -4,16 +4,19 @@ import { ILoginData, ITokenState } from "../../shared/types";
 
 import Cookies from "js-cookie";
 
-// TOKEN SIMULADO ENQUANTO API ESTÁ FORA DO AR
-Cookies.set("token", "tokenTest");
+interface tokenResponse {
+  data: string;
+}
 
 // ACTIONS
 export const login = createAsyncThunk<string, ILoginData>(
   "user/login",
   async (data, { rejectWithValue }) => {
     try {
-      const response: Promise<string> = api.post("auth", data);
-      return response;
+      console.log(data);
+      const response: tokenResponse = await api.post("auth", data);
+      console.log(response);
+      return response.data;
     } catch (e: any) {
       return rejectWithValue(e.message);
     }
@@ -43,8 +46,8 @@ const authSlice = createSlice({
       .addCase(login.fulfilled, (state, action: PayloadAction<string>) => {
         state.loading = false;
         state.token = action.payload;
-        // Cookies.set("token", action.payload);
-        // console.log(Cookies.get("token"));
+        Cookies.set("token", action.payload);
+        console.log(Cookies.get("token"));
       });
   },
 });
