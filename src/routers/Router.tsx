@@ -7,6 +7,7 @@ import { Checkout } from "../pages/Checkout";
 import { AdminLayout } from "../shared/layouts/AdminLayout";
 import { Orders } from "../pages/Admin/Orders";
 import { Admin } from "../pages/Admin";
+import { OrderConfirmation } from "../pages/orderConfirmation";
 
 export function Router() {
   return (
@@ -15,6 +16,7 @@ export function Router() {
       <Route path="/" element={<DefaultLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/confirmado" element={<OrderConfirmation />} />
       </Route>
 
       {/* Admin */}
