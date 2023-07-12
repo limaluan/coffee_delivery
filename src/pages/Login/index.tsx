@@ -18,12 +18,12 @@ export function Login() {
     <LoginContainer>
       <form
         onSubmit={handleSubmit(async (data) => {
-          const a = await dispatch(
+          const response = await dispatch(
             login({ email: data.email, senha: data.password })
           );
-          console.log(a);
-          a.meta.requestStatus === "rejected"
-            ? console.log(a.meta.requestStatus)
+          console.log(response);
+          response.meta.requestStatus === "rejected"
+            ? console.log(response.meta.requestStatus)
             : (window.location.href = "admin");
         })}
         className="form-container"

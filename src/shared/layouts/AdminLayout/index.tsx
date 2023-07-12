@@ -5,9 +5,9 @@ import { AdminLayoutContainer } from "./styles";
 import { useAppSelector } from "../../hooks/useTypedSelector";
 
 export function AdminLayout() {
-  const { token: data } = useAppSelector((state) => state);
+  const { auth: { token } } = useAppSelector((state) => state);
 
-  const isAuthenticated = data ? true : false;
+  const isAuthenticated = token ? true : false;
 
   return isAuthenticated ? (
     <AdminLayoutContainer>
