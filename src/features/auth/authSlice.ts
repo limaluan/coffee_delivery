@@ -47,7 +47,6 @@ const authSlice = createSlice({
         state.loading = false;
         state.token = action.payload;
         Cookies.set("token", action.payload);
-        console.log(Cookies.get("token"));
       });
   },
 });

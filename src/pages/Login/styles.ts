@@ -49,6 +49,20 @@ export const LoginContainer = styled.main`
       &::placeholder {
         font-size: 1.4rem;
       }
+
+      &.error {
+        border: 1px solid red;
+        animation: shake 600ms;
+        
+        @keyframes shake {
+          0% { transform: translateX(0rem) }
+          20% { transform: translateX(0.6rem) }
+          40% { transform: translateX(-0.6rem) }
+          60% { transform: translateX(0.6rem) }
+          80% { transform: translateX(-0.6rem) }
+          100% { transform: translateX(0) }
+        }
+      }
     }
 
     button {
