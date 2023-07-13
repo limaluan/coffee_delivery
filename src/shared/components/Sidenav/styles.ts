@@ -18,6 +18,8 @@ export const SidenavContainer = styled.nav`
   color: var(--black-300);
   background-color: var(--background);
 
+  transition: all 250ms;
+  
   .logo {
     width: 15rem;
     padding: 1rem;
