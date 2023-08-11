@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { GlobalStyles } from "./shared/styles/global";
 
 import { Provider } from "react-redux";
-import { store } from "./store";
+import { store } from "../src/store";
 
 function App() {
   return (

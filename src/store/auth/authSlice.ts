@@ -2,8 +2,6 @@ import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { api } from "../../shared/services/api";
 import { ILoginData, ITokenState } from "../../shared/types";
 
-import Cookies from "js-cookie";
-
 interface tokenResponse {
   data: string;
 }
@@ -27,7 +25,7 @@ export const login = createAsyncThunk<string, ILoginData>(
 const initialState = {
   loading: false,
   error: null,
-  token: Cookies.get("token"),
+  token: localStorage.getItem("token"),
 } as ITokenState;
 
 const authSlice = createSlice({
@@ -46,7 +44,7 @@ const authSlice = createSlice({
       .addCase(login.fulfilled, (state, action: PayloadAction<string>) => {
         state.loading = false;
         state.token = action.payload;
-        Cookies.set("token", action.payload);
+        localStorage.setItem("token", action.payload);
       });
   },
 });

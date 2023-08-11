@@ -3,7 +3,7 @@ import { LoginContainer } from "./styles";
 import coffeeImg from "../../assets/coffee.svg";
 import { useForm } from "react-hook-form";
 import { useAppDispatch } from "../../shared/hooks/useTypedSelector";
-import { login } from "../../features/auth/authSlice";
+import { login } from "../../store/auth/authSlice";
 import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
