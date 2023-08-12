@@ -34,8 +34,6 @@ export function Sidenav() {
   };
 
   window.addEventListener("resize", () => {
-    console.log("foi");
-    console.log(window.innerWidth);
     if (window.innerWidth > 768) {
       setSidenavIsOn(true);
       if (sidenav.current) {
@@ -68,7 +66,7 @@ export function Sidenav() {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to={""}>
+          <Link to={"/admin/catalogo"}>
             <LuLayoutList />
             Catálogo
           </Link>

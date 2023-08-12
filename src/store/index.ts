@@ -1,4 +1,4 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
 import { authReducer, productsSlice } from "./reducers";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
@@ -15,4 +15,4 @@ export const store = configureStore({
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
-setupListeners(store.dispatch)
+setupListeners(store.dispatch);

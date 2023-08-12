@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const SidenavContainer = styled.nav`
   padding: 5rem 3rem;
   width: 25rem;
-  height: 100vh;
   z-index: 1000;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: self-start;
-  position: absolute;
+  position: fixed;
   left: 0;
   gap: 5rem;
 
@@ -19,7 +19,7 @@ export const SidenavContainer = styled.nav`
   background-color: var(--background);
 
   transition: all 250ms;
-  
+
   .logo {
     width: 15rem;
     padding: 1rem;
@@ -65,6 +65,7 @@ export const SidenavContainer = styled.nav`
 
   @media (max-width: 768px) {
     left: -25rem;
+    padding-top: 2rem;
     margin-top: 6rem;
     height: calc(100vh - 6rem);
 
