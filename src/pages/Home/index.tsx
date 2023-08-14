@@ -5,7 +5,7 @@ import boxIcon from "../../assets/box_icon.svg";
 import timeIcon from "../../assets/time_icon.svg";
 import coffeeIcon from "../../assets/coffee_icon.svg";
 import coffeeImg from "../../assets/coffee.svg";
-import { OurCoffees } from "../../shared/components/OurCoffees";
+import { CoffeesGrid } from "../../shared/components/CoffeesGrid";
 
 export function Home() {
   return (
@@ -41,7 +41,7 @@ export function Home() {
 
         <img className="coffee desktop-only" src={coffeeImg} alt="Coffee" />
       </HomeContainer>
-      <OurCoffees />
+      <CoffeesGrid />
     </>
   );
 }
