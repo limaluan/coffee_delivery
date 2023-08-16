@@ -19,6 +19,13 @@ export const HomeContainer = styled.main`
     margin: 0 auto;
   }
 
+  .background-img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  
   h1 {
     font-size: 4.8rem;
     font-weight: 800;

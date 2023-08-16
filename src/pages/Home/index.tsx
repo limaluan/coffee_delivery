@@ -5,6 +5,7 @@ import boxIcon from "../../assets/box_icon.svg";
 import timeIcon from "../../assets/time_icon.svg";
 import coffeeIcon from "../../assets/coffee_icon.svg";
 import coffeeImg from "../../assets/coffee.svg";
+import backgroundImg from "../../assets/home_background.svg";
 import { CoffeesGrid } from "../../shared/components/CoffeesGrid";
 
 export function Home() {
@@ -12,6 +13,7 @@ export function Home() {
     <>
       <HomeContainer>
         <section>
+          <img className="background-img" src={backgroundImg} alt="" />
           <h1>Encontre o café perfeito para qualquer hora do dia</h1>
           <p>
             Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
