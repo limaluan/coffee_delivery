@@ -16,3 +16,11 @@ export interface IProductAPIResponse {
   data: string;
   dados: IProductType[];
 }
+
+export interface ITokenAPIResponse {
+  data: {
+    mensagem: string;
+    data: string;
+    dados: string;
+  };
+}

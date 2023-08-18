@@ -12,7 +12,6 @@ export function Login() {
   const {
     register,
     handleSubmit,
-    // formState: { errors },
   } = useForm();
 
   const dispatch = useAppDispatch();
