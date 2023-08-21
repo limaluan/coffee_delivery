@@ -1,13 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 
+import { AdminLayout, DefaultLayout } from "../layouts";
 import { Home } from "../pages/Home";
-import { DefaultLayout } from "../shared/layouts/DefaultLayout";
 import { Login } from "../pages/Login";
 import { Checkout } from "../pages/Checkout";
-import { AdminLayout } from "../shared/layouts/AdminLayout";
+import { OrderConfirmation } from "../pages/orderConfirmation";
+
 import { Orders } from "../pages/Admin/Orders";
 import { Admin } from "../pages/Admin";
-import { OrderConfirmation } from "../pages/orderConfirmation";
+import { Catalog } from "../pages/Admin/Catalog";
 
 export function Router() {
   return (
@@ -24,6 +25,7 @@ export function Router() {
       <Route path="/admin" element={<AdminLayout />}>
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin/pedidos" element={<Orders />} />
+        <Route path="/admin/catalogo" element={<Catalog />} />
       </Route>
     </Routes>
   );

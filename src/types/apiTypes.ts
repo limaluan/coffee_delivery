@@ -18,9 +18,7 @@ export interface IProductAPIResponse {
 }
 
 export interface ITokenAPIResponse {
-  data: {
-    mensagem: string;
-    data: string;
-    dados: string;
-  };
+  mensagem: string;
+  data: string;
+  dados: string;
 }

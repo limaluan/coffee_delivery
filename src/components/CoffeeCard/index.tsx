@@ -1,6 +1,6 @@
 import { CoffeeCardContainer } from "./styles";
 
-import CartImg from "../../../assets/cart_icon.svg";
+import CartImg from "../../assets/cart_icon.svg";
 import { Counter } from "../Counter";
 import { IProductType } from "../../types";
 import { formatPrice } from "../../utils/formatPrice";

@@ -8,19 +8,6 @@ export const CheckoutContainer = styled.main`
   width: 100%;
   padding-bottom: 10rem;
 
-  input {
-    all: unset;
-    background-color: var(--input);
-    border: 1px solid var(--button);
-
-    padding: 1.2rem;
-    border-radius: 4px;
-
-    &::placeholder {
-      color: #8d8686;
-    }
-  }
-
   .titles {
     font-size: 1.8rem;
   }

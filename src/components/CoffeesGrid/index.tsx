@@ -1,6 +1,6 @@
 import { CoffeeCard } from "../CoffeeCard";
 import { CoffeesGridContainer } from "./styles";
-import { useGetProductsQuery } from "../../../store/products/productsSlice";
+import { useGetProductsQuery } from "../../store/products/productsSlice";
 
 export function CoffeesGrid() {
   const { data: products } = useGetProductsQuery();

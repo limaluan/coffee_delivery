@@ -6,7 +6,7 @@ import timeIcon from "../../assets/time_icon.svg";
 import coffeeIcon from "../../assets/coffee_icon.svg";
 import coffeeImg from "../../assets/coffee.svg";
 import backgroundImg from "../../assets/home_background.svg";
-import { CoffeesGrid } from "../../shared/components/CoffeesGrid";
+import { CoffeesGrid } from "../../components/CoffeesGrid";
 
 export function Home() {
   return (

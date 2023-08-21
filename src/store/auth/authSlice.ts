@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import { api } from "../../shared/services/api";
-import { ILoginData, ITokenAPIResponse, ITokenState } from "../../shared/types";
+import { api } from "../../services/api";
+import { ILoginData, ITokenAPIResponse, ITokenState } from "../../types";
 
 // ACTIONS
 export const login = createAsyncThunk<string, ILoginData>(
@@ -8,9 +8,8 @@ export const login = createAsyncThunk<string, ILoginData>(
   async (data, { rejectWithValue }) => {
     try {
       console.log(data);
-      const response: ITokenAPIResponse = await api.post("auth", data);
-      console.log(response);
-      return response.data.dados;
+      const { data: response } = await api.post<ITokenAPIResponse>("auth", data);
+      return response.dados;
     } catch (e: any) {
       return rejectWithValue(e.message);
     }

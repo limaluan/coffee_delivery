@@ -8,8 +8,9 @@ import coffeeImg from "../../assets/coffee_placeholder.svg";
 import moneyIconImg from "../../assets/money_icon.svg";
 import trashIconImg from "../../assets/trash_icon.svg";
 
-import { Counter } from "../../shared/components/Counter";
+import { Counter } from "../../components/Counter";
 import { useState } from "react";
+import { Input } from "../../components/Input/styles";
 
 interface IPaymentMethod {
   method: null | "credit" | "debit" | "money";
@@ -35,13 +36,13 @@ export function Checkout() {
           </div>
 
           <form className="address-form">
-            <input type="text" placeholder="CEP" />
-            <input type="text" placeholder="Rua" />
-            <input type="text" placeholder="Número" />
-            <input type="text" placeholder="Complemento" />
-            <input type="text" placeholder="Bairro" />
-            <input type="text" id="city-input" placeholder="Cidade" />
-            <input type="text" id="uf-input" placeholder="UF" />
+            <Input type="text" placeholder="CEP" />
+            <Input type="text" placeholder="Rua" />
+            <Input type="text" placeholder="Número" />
+            <Input type="text" placeholder="Complemento" />
+            <Input type="text" placeholder="Bairro" />
+            <Input type="text" id="city-input" placeholder="Cidade" />
+            <Input type="text" id="uf-input" placeholder="UF" />
           </form>
         </div>
 

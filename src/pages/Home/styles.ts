@@ -24,6 +24,7 @@ export const HomeContainer = styled.main`
     width: 100%;
     left: 0;
     top: 0;
+    z-index: -1;
   }
   
   h1 {

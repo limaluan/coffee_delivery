@@ -1,6 +1,6 @@
 import { Router } from "./routers/Router";
 import { BrowserRouter } from "react-router-dom";
-import { GlobalStyles } from "./shared/styles/global";
+import { GlobalStyles } from "./styles/global";
 
 import { Provider } from "react-redux";
 import { store } from "../src/store";
