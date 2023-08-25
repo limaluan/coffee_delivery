@@ -1,11 +1,22 @@
 import { CoffeeCardContainer } from "./styles";
 
 import CartImg from "../../assets/cart_icon.svg";
-import { Counter } from "../Counter";
-import { IProductType } from "../../types";
+import { ICoffeeType } from "../../types";
 import { formatPrice } from "../../utils/formatPrice";
+import { useState } from "react";
+import { useAppDispatch } from "../../hooks/useTypedSelector";
+import { addItemToCart } from "../../store/cart/cartSlice";
 
-export function CoffeeCard(product: IProductType) {
+export function CoffeeCard(product: ICoffeeType) {
+  const dispatch = useAppDispatch();
+
+  const [coffeeQuantity, setCoffeeQuantity] = useState(1);
+
+  const handleAddToCart = () => {
+    dispatch(addItemToCart({ coffee: product, quantityToAdd: coffeeQuantity }));
+    setCoffeeQuantity(1);
+  };
+
   return (
     <CoffeeCardContainer>
       <img
@@ -25,8 +36,27 @@ export function CoffeeCard(product: IProductType) {
           </p>
 
           <div className="coffee-quantity">
-            <Counter />
-            <button className="cart-button">
+            <div className="counter">
+              <button
+                onClick={() => {
+                  coffeeQuantity >= 2 &&
+                    setCoffeeQuantity((oldAmount) => oldAmount - 1);
+                }}
+              >
+                <span>-</span>
+              </button>
+
+              <span>{coffeeQuantity}</span>
+
+              <button
+                onClick={() => {
+                  setCoffeeQuantity((oldAmount) => oldAmount + 1);
+                }}
+              >
+                <span>+</span>
+              </button>
+            </div>
+            <button className="cart-button" onClick={handleAddToCart}>
               <img src={CartImg} alt="Carrinho de Compra" />
             </button>
           </div>

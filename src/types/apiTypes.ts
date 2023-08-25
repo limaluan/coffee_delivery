@@ -1,4 +1,4 @@
-import { IProductType } from "./productType";
+import { ICoffeeType } from "./coffeeType";
 
 export interface ITokenState {
   loading: boolean;
@@ -11,10 +11,10 @@ export interface ILoginData {
   senha: string;
 }
 
-export interface IProductAPIResponse {
+export interface ICoffeeAPIResponse {
   mensagem: string;
   data: string;
-  dados: IProductType[];
+  dados: ICoffeeType[];
 }
 
 export interface ITokenAPIResponse {

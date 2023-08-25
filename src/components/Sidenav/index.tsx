@@ -5,36 +5,21 @@ import { InputWSearchIcon } from "../Input";
 
 import { BiSolidDashboard, BiTask, BiMenu } from "react-icons/bi";
 import { MdInventory } from "react-icons/md";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export function Sidenav() {
-  const sidenavMenu = useRef<HTMLUListElement>(null);
-
-  const [isSidenavOn, setIsSidenavOn] = useState(false);
+  const [isSidenavOn, setIsSidenavOn] = useState(window.innerWidth >= 768);
 
   const handleToggleSidenav = () => {
-    if (isSidenavOn) {
-      if (sidenavMenu.current) {
-        sidenavMenu.current.style.transform = "translateX(-100%)";
-      }
-      return setIsSidenavOn(false);
-    } else {
-      if (sidenavMenu.current) {
-        sidenavMenu.current.style.transform = "translateX(0)";
-      }
-      return setIsSidenavOn(true);
-    }
+    setIsSidenavOn(!isSidenavOn);
   };
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) {
-      setIsSidenavOn(true);
-      if (sidenavMenu.current) {
-        sidenavMenu.current.style.transform = "translateX(0)";;
-      }
-    }
-  });
-  
+  const menuItems = [
+    { icon: <BiSolidDashboard />, text: "Painel" },
+    { icon: <MdInventory />, text: "Inventário" },
+    { icon: <BiTask />, text: "Pedidos" },
+  ];
+
   return (
     <SidenavContainer>
       <header>
@@ -43,23 +28,20 @@ export function Sidenav() {
       <nav>
         <div>
           <img src={logoImg} alt="Logo da Coffee Delivery" />
-          <button className="mobile-only" onClick={handleToggleSidenav}>
+          <button
+            className={`mobile-only ${isSidenavOn ? 'active' : ''}`}
+            onClick={handleToggleSidenav}
+          >
             <BiMenu />
           </button>
         </div>
-        <ul ref={sidenavMenu}>
-          <li>
-            <BiSolidDashboard />
-            <span>Painel</span>
-          </li>
-          <li>
-            <MdInventory />
-            <span>Inventário</span>
-          </li>
-          <li>
-            <BiTask />
-            <span>Pedidos</span>
-          </li>
+        <ul className={`${isSidenavOn ? 'active' : ''}`}>
+          {menuItems.map((item, index) => (
+            <li key={index}>
+              {item.icon}
+              <span>{item.text}</span>
+            </li>
+          ))}
         </ul>
       </nav>
     </SidenavContainer>

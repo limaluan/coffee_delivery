@@ -4,13 +4,11 @@ import gpsIconImg from "../../assets/gps_icon.svg";
 import creditCardIconImg from "../../assets/credit_card.svg";
 import dollarIconImg from "../../assets/dollar_icon.svg";
 import bankIconImg from "../../assets/bank.svg";
-import coffeeImg from "../../assets/coffee_placeholder.svg";
 import moneyIconImg from "../../assets/money_icon.svg";
-import trashIconImg from "../../assets/trash_icon.svg";
 
-import { Counter } from "../../components/Counter";
 import { useState } from "react";
 import { Input } from "../../components/Input/styles";
+import { CoffeesCartList } from "../../components/CoffeesCartList";
 
 interface IPaymentMethod {
   method: null | "credit" | "debit" | "money";
@@ -85,58 +83,7 @@ export function Checkout() {
         </div>
       </section>
 
-      <section className="coffees-container">
-        <h2 className="titles">Cafés Selecionados</h2>
-
-        <div className="coffees-selected">
-          <div className="coffee-card">
-            <img className="coffee-img" src={coffeeImg} alt="Imagem do café" />
-            <div className="coffee-info">
-              <div className="info-header">
-                <p className="coffee-name">Expresso Tradicional</p>
-                <p className="coffee-price">R$ 9,90</p>
-              </div>
-
-              <div className="info-buttons">
-                <Counter />
-                <button className="remove-button">
-                  <img src={trashIconImg} alt="Ícone de lixeira" />
-                  <span>Remover</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="coffee-card">
-            <img className="coffee-img" src={coffeeImg} alt="Imagem do café" />
-            <div className="coffee-info">
-              <div className="info-header">
-                <p className="coffee-name">Expresso Tradicional</p>
-                <p className="coffee-price">R$ 9,90</p>
-              </div>
-
-              <div className="info-buttons">
-                <Counter />
-                <button className="remove-button">
-                  <img src={trashIconImg} alt="Ícone de lixeira" />
-                  <span>Remover</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="order-info">
-            <p>Total de Itens</p>
-            <p>R$ 29,70</p>
-            <p>Entrega</p>
-            <p>R$ 3,50</p>
-            <p className="total">Total</p>
-            <p className="total">R$ 33,20</p>
-          </div>
-
-          <button className="confirm-button">CONFIRMAR PEDIDO</button>
-        </div>
-      </section>
+      <CoffeesCartList />
     </CheckoutContainer>
   );
 }

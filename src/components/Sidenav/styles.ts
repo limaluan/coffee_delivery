@@ -35,7 +35,7 @@ export const SidenavContainer = styled.div`
       align-items: center;
       background-color: #fff;
       padding-left: 3rem;
-      
+
       box-shadow: 1px 0px 6px 0px rgba(0, 0, 0, 0.15);
       border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     }
@@ -128,7 +128,11 @@ export const SidenavContainer = styled.div`
 
       ul {
         padding: 0;
-        transition: transform 200ms;
+        display: none;
+
+        &.active {
+          display: flex;
+        }
       }
     }
 

@@ -66,6 +66,27 @@ export const CoffeeCardContainer = styled.article`
     display: flex;
     align-items: center;
 
+    .counter {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background-color: var(--button);
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+
+      button {
+        color: var(--purple);
+
+        span {
+          font-size: 2rem;
+        }
+      }
+
+      span {
+        font-size: 1.6rem;
+      }
+    }
+
     .cart-button {
       background-color: var(--purple-dark);
       margin-left: 1rem;

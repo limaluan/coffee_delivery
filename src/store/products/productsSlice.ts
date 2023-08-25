@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IProductType, IProductAPIResponse } from "../../types";
+import { ICoffeeType, ICoffeeAPIResponse } from "../../types";
 
 export const productsSlice = createApi({
   reducerPath: "productsSlice",
@@ -8,9 +8,9 @@ export const productsSlice = createApi({
   }),
   tagTypes: ["products"],
   endpoints: (builder) => ({
-    getProducts: builder.query<IProductType[], void>({
+    getProducts: builder.query<ICoffeeType[], void>({
       query: () => "/produto/buscar",
-      transformResponse: (response: IProductAPIResponse) => response.dados,
+      transformResponse: (response: ICoffeeAPIResponse) => response.dados,
     }),
   }),
 });
