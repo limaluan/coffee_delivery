@@ -1,4 +1,3 @@
-import { useLayoutEffect } from "react";
 import trashIconImg from "../../assets/trash_icon.svg";
 
 import { formatPrice } from "../../utils/formatPrice";
@@ -6,7 +5,6 @@ import { CoffeesListContainer } from "./styles";
 import { useAppDispatch, useAppSelector } from "../../hooks/useTypedSelector";
 import {
   addItemToCart,
-  loadCart,
   removeItemFromCart,
   removeSingleItemFromCart,
 } from "../../store/cart/cartSlice";
@@ -15,10 +13,6 @@ export function CoffeesCartList() {
   const dispatch = useAppDispatch();
 
   const { cartItems } = useAppSelector((state) => state.cart);
-
-  useLayoutEffect(() => {
-    dispatch(loadCart());
-  }, [window]);
 
   return (
     <CoffeesListContainer>

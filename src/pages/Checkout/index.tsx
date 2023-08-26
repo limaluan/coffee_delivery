@@ -82,7 +82,6 @@ export function Checkout() {
           </div>
         </div>
       </section>
-
       <CoffeesCartList />
     </CheckoutContainer>
   );

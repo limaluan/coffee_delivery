@@ -2,7 +2,6 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ICartProps, IAddItemToCartDataPayload } from "../../types/cartTypes";
 import { ICoffeeType, ICoffeeTypeWithQuantity } from "../../types";
 
-// ACTIONS
 const getCartFromLocalStorage = (): ICoffeeTypeWithQuantity[] => {
   const localCart = localStorage.getItem("cart");
   let updatedCart: ICoffeeTypeWithQuantity[] = [];
@@ -16,7 +15,6 @@ const updateCartInLocalStorage = (updatedCart: ICoffeeTypeWithQuantity[]) => {
   localStorage.setItem("cart", JSON.stringify(updatedCart));
 };
 
-// SLICE
 const initialState = {
   cartItems: [],
 } as ICartProps;

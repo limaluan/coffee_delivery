@@ -4,9 +4,19 @@ import cartIcon from "../../assets/cart_icon.svg";
 import gpsIcon from "../../assets/gps_icon_full.svg";
 import logoImg from "../../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../hooks/useTypedSelector";
+import { useEffect } from "react";
+import { loadCart } from "../../store/cart/cartSlice";
 
 export function Header() {
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+
+  const { cartItems } = useAppSelector((state) => state.cart);
+
+  useEffect(() => {
+    dispatch(loadCart());
+  }, []);
 
   return (
     <HeaderContainer>
@@ -24,6 +34,11 @@ export function Header() {
             alt="Ícone Carrinho"
             onClick={() => navigate("checkout")}
           />
+          {cartItems.length >= 1 && (
+            <div className="cart-counter">
+              <span>{cartItems.length}</span>
+            </div>
+          )}
         </button>
       </div>
     </HeaderContainer>
