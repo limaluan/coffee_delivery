@@ -98,4 +98,32 @@ export const CoffeesListContainer = styled.section`
       z-index: 999;
     }
   }
+
+  .confirm-button {
+    width: 100%;
+    background-color: var(--yellow);
+    padding: 1.2rem 0;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 2.4rem;
+
+    &:hover {
+      background-color: var(--yellow-dark);
+      transition: background-color 75ms;
+    }
+
+    &:disabled {
+      background-color: var(--yellow-dark);
+      cursor: not-allowed;
+    }
+  }
+
+  .empty-cart-msg {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--subtitle);
+  }
 `;

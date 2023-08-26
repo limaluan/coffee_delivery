@@ -23,3 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 .editorconfig
+
+# Files temporarily ignored
+*spec.tsx
+*spec.ts
+*test.tsx
+*test.ts

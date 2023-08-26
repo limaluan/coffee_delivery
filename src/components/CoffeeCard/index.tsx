@@ -6,6 +6,7 @@ import { formatPrice } from "../../utils/formatPrice";
 import { useState } from "react";
 import { useAppDispatch } from "../../hooks/useTypedSelector";
 import { addItemToCart } from "../../store/cart/cartSlice";
+import { ToastContainer, toast } from "react-toastify";
 
 export function CoffeeCard(product: ICoffeeType) {
   const dispatch = useAppDispatch();
@@ -15,8 +16,10 @@ export function CoffeeCard(product: ICoffeeType) {
   const handleAddToCart = () => {
     dispatch(addItemToCart({ coffee: product, quantityToAdd: coffeeQuantity }));
     setCoffeeQuantity(1);
+    return toast.success(`${product.nome} foi adicionado ao carrinho!`, {
+      autoClose: 2000,
+    });
   };
-
   return (
     <CoffeeCardContainer>
       <img
@@ -62,6 +65,7 @@ export function CoffeeCard(product: ICoffeeType) {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </CoffeeCardContainer>
   );
 }

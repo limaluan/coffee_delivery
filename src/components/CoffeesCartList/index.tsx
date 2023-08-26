@@ -19,7 +19,8 @@ export function CoffeesCartList() {
       <h2 className="titles">Cafés Selecionados</h2>
 
       <div className="coffees-selected">
-        {cartItems.map((coffee) => (
+        {cartItems.length >= 1 
+        ? cartItems.map((coffee) => (
           <div className="coffee-card" key={coffee.idProduto}>
             <img
               className="coffee-img"
@@ -62,7 +63,10 @@ export function CoffeesCartList() {
               </div>
             </div>
           </div>
-        ))}
+        )
+        ) 
+        : 
+        (<p className="empty-cart-msg">Seu carrinho ainda está vazio...</p>)}
 
         <div className="order-info">
           <p>Total de Itens</p>
@@ -89,7 +93,7 @@ export function CoffeesCartList() {
           </p>
         </div>
 
-        <button className="confirm-button">CONFIRMAR PEDIDO</button>
+        <button className="confirm-button" disabled={cartItems.length < 1}>CONFIRMAR PEDIDO</button>
       </div>
     </CoffeesListContainer>
   );

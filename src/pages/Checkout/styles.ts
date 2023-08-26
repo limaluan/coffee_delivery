@@ -117,22 +117,6 @@ export const CheckoutContainer = styled.main`
     }
   }
 
-  .confirm-button {
-    width: 100%;
-    background-color: var(--yellow);
-    padding: 1.2rem 0;
-    font-weight: 700;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    margin-top: 2.4rem;
-
-    &:hover {
-      background-color: var(--yellow-dark);
-      transition: background-color 75ms;
-    }
-  }
-
   @media (min-width: 768px) {
     max-width: 80vw;
     margin: 0 auto;
