@@ -1,5 +1,3 @@
-import trashIconImg from "../../assets/trash_icon.svg";
-
 import { formatPrice } from "../../utils/formatPrice";
 import { CoffeesListContainer } from "./styles";
 import { useAppDispatch, useAppSelector } from "../../hooks/useTypedSelector";
@@ -8,6 +6,7 @@ import {
   removeItemFromCart,
   removeSingleItemFromCart,
 } from "../../store/cart/cartSlice";
+import { Counter } from "../Counter";
 
 export function CoffeesCartList() {
   const dispatch = useAppDispatch();
@@ -19,54 +18,43 @@ export function CoffeesCartList() {
       <h2 className="titles">Cafés Selecionados</h2>
 
       <div className="coffees-selected">
-        {cartItems.length >= 1 
-        ? cartItems.map((coffee) => (
-          <div className="coffee-card" key={coffee.idProduto}>
-            <img
-              className="coffee-img"
-              src={`data:image/png;base64, ${coffee.imagem}`}
-              alt="Imagem do café"
-            />
-            <div className="coffee-info">
-              <div className="info-header">
-                <p className="coffee-name">{coffee.nome}</p>
-                <p className="coffee-price">
-                  R$ {formatPrice(coffee.preco * coffee.quantidade)}
-                </p>
-              </div>
-
-              <div className="info-buttons">
-                <div className="counter">
-                  <button
-                    onClick={() => dispatch(removeSingleItemFromCart(coffee))}
-                  >
-                    <span>-</span>
-                  </button>
-
-                  <span>{coffee.quantidade}</span>
-
-                  <button
-                    onClick={() =>
-                      dispatch(addItemToCart({ coffee, quantityToAdd: 1 }))
-                    }
-                  >
-                    <span>+</span>
-                  </button>
+        {cartItems.length >= 1 ? (
+          cartItems.map((coffee) => (
+            <div className="coffee-card" key={coffee.idProduto}>
+              <img
+                className="coffee-img"
+                src={`data:image/png;base64, ${coffee.imagem}`}
+                alt="Imagem do café"
+              />
+              <div className="coffee-info">
+                <div className="info-header">
+                  <p className="coffee-name">{coffee.nome}</p>
+                  <p className="coffee-price">
+                    R$ {formatPrice(coffee.preco * coffee.quantidade)}
+                  </p>
                 </div>
-                <button
-                  className="remove-button"
-                  onClick={() => dispatch(removeItemFromCart(coffee))}
+
+                <Counter.Root
+                  key={coffee.idProduto}
+                  quantity={coffee.quantidade}
+                  onClickMinus={() =>
+                    dispatch(removeSingleItemFromCart(coffee))
+                  }
+                  onClickPlus={() =>
+                    dispatch(addItemToCart({ coffee, quantityToAdd: 1 }))
+                  }
                 >
-                  <img src={trashIconImg} alt="Ícone de lixeira" />
-                  <span>Remover</span>
-                </button>
+                  <Counter.RemoveButton
+                    key={coffee.idProduto}
+                    onClickRemove={() => dispatch(removeItemFromCart(coffee))}
+                  />
+                </Counter.Root>
               </div>
             </div>
-          </div>
-        )
-        ) 
-        : 
-        (<p className="empty-cart-msg">Seu carrinho ainda está vazio...</p>)}
+          ))
+        ) : (
+          <p className="empty-cart-msg">Seu carrinho ainda está vazio...</p>
+        )}
 
         <div className="order-info">
           <p>Total de Itens</p>
@@ -93,7 +81,9 @@ export function CoffeesCartList() {
           </p>
         </div>
 
-        <button className="confirm-button" disabled={cartItems.length < 1}>CONFIRMAR PEDIDO</button>
+        <button className="confirm-button" disabled={cartItems.length < 1}>
+          CONFIRMAR PEDIDO
+        </button>
       </div>
     </CoffeesListContainer>
   );

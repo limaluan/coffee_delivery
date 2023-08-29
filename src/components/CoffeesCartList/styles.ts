@@ -49,41 +49,6 @@ export const CoffeesListContainer = styled.section`
         justify-content: space-between;
         align-items: center;
       }
-
-      .info-buttons {
-        display: flex;
-        gap: 1rem;
-
-        .counter {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          background-color: var(--button);
-          padding: 0.6rem 1rem;
-          border-radius: 6px;
-
-          button {
-            color: var(--purple);
-
-            span {
-              font-size: 2rem;
-            }
-          }
-
-          span {
-            font-size: 1.6rem;
-          }
-        }
-
-        .remove-button {
-          display: flex;
-          align-items: center;
-          background-color: var(--button);
-          border-radius: 6px;
-          padding: 0 1rem;
-          gap: 1rem;
-        }
-      }
     }
 
     &::after {

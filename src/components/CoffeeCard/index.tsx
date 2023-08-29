@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useAppDispatch } from "../../hooks/useTypedSelector";
 import { addItemToCart } from "../../store/cart/cartSlice";
 import { ToastContainer, toast } from "react-toastify";
+import { Counter } from "../Counter";
 
 export function CoffeeCard(product: ICoffeeType) {
   const dispatch = useAppDispatch();
@@ -20,6 +21,7 @@ export function CoffeeCard(product: ICoffeeType) {
       autoClose: 2000,
     });
   };
+
   return (
     <CoffeeCardContainer>
       <img
@@ -39,26 +41,16 @@ export function CoffeeCard(product: ICoffeeType) {
           </p>
 
           <div className="coffee-quantity">
-            <div className="counter">
-              <button
-                onClick={() => {
-                  coffeeQuantity >= 2 &&
-                    setCoffeeQuantity((oldAmount) => oldAmount - 1);
-                }}
-              >
-                <span>-</span>
-              </button>
-
-              <span>{coffeeQuantity}</span>
-
-              <button
-                onClick={() => {
-                  setCoffeeQuantity((oldAmount) => oldAmount + 1);
-                }}
-              >
-                <span>+</span>
-              </button>
-            </div>
+            <Counter.Root
+              quantity={coffeeQuantity}
+              onClickMinus={() => {
+                coffeeQuantity >= 2 &&
+                  setCoffeeQuantity((oldAmount) => oldAmount - 1);
+              }}
+              onClickPlus={() => {
+                setCoffeeQuantity((oldAmount) => oldAmount + 1);
+              }}
+            />
             <button className="cart-button" onClick={handleAddToCart}>
               <img src={CartImg} alt="Carrinho de Compra" />
             </button>
