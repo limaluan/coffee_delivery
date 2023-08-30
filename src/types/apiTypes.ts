@@ -1,14 +1,9 @@
-import { ICoffeeType } from "./coffeeType";
+import { ICoffeeType } from "./coffeesType";
 
 export interface ITokenState {
   loading: boolean;
   error: null | string;
   token: null | string;
-}
-
-export interface ILoginData {
-  email: string;
-  senha: string;
 }
 
 export interface ICoffeeAPIResponse {

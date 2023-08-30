@@ -4,3 +4,8 @@ export interface IUser {
   senha: string;
   idUsuario: number;
 }
+
+export interface ILoginDataPayload {
+  email: string;
+  senha: string;
+}

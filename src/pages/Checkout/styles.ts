@@ -18,7 +18,7 @@ export const CheckoutContainer = styled.main`
     gap: 1.5rem;
   }
 
-  .address-container,
+  .form-container,
   .payment-container,
   .payment-methods {
     background-color: var(--card);
@@ -31,8 +31,14 @@ export const CheckoutContainer = styled.main`
     padding: 2rem 1rem;
   }
 
-  .address-container {
+  .form-container {
     max-width: 73rem;
+  }
+
+  .user-icon {
+    min-width: 2rem;
+    min-height: 2rem;
+    color: var(--yellow-dark);
   }
 
   .payment-methods {
@@ -57,7 +63,17 @@ export const CheckoutContainer = styled.main`
     }
   }
 
-  .address-header,
+  .client-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .form-header,
   .payment-header {
     display: flex;
     align-items: center;
@@ -67,7 +83,6 @@ export const CheckoutContainer = styled.main`
 
     img {
       height: 2rem;
-      align-self: flex-start;
     }
 
     div :first-child {
@@ -133,7 +148,7 @@ export const CheckoutContainer = styled.main`
   @media (min-width: 1024px) {
     flex-direction: row;
 
-    .address-container,
+    .form-container,
     .payment-container,
     .coffees-selected {
       padding: 2rem;
@@ -159,6 +174,20 @@ export const CheckoutContainer = styled.main`
 
       input:nth-child(4) {
         flex: 0.75;
+      }
+    }
+
+    .client-form {
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 2rem;
+
+      input:nth-child(1) {
+        flex: 0.6;
+      }
+
+      input:nth-child(2) {
+        flex: 0.4;
       }
     }
   }

@@ -1,4 +1,4 @@
-import { ICoffeeType, ICoffeeTypeWithQuantity } from "./coffeeType";
+import { ICoffeeType, ICoffeeTypeWithQuantity } from "./coffeesType";
 
 export interface ICartProps {
   cartItems: ICoffeeTypeWithQuantity[];

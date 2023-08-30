@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { api } from "../../services/api";
-import { ILoginData, ITokenAPIResponse, ITokenState } from "../../types";
+import { ILoginDataPayload, ITokenAPIResponse, ITokenState } from "../../types";
 
 // ACTIONS
-export const login = createAsyncThunk<string, ILoginData>(
+export const login = createAsyncThunk<string, ILoginDataPayload>(
   "user/login",
   async (data, { rejectWithValue }) => {
     try {

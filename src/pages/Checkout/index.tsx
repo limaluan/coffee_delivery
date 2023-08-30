@@ -9,6 +9,7 @@ import moneyIconImg from "../../assets/money_icon.svg";
 import { useState } from "react";
 import { Input } from "../../components/Input/styles";
 import { CoffeesCartList } from "../../components/CoffeesCartList";
+import { AiOutlineUser } from "react-icons/ai";
 
 interface IPaymentMethod {
   method: null | "credit" | "debit" | "money";
@@ -24,8 +25,26 @@ export function Checkout() {
       <section className="complete-order">
         <h2 className="titles">Complete seu pedido</h2>
 
-        <div className="address-container">
-          <div className="address-header">
+        <div className="form-container">
+          <div className="form-header">
+            <AiOutlineUser className="user-icon" />
+            <div>
+              <p>Seus dados</p>
+              <p>
+                Informe o seu nome e número de celular para podermos entrar em
+                contato
+              </p>
+            </div>
+          </div>
+
+          <form className="client-form">
+            <Input type="text" placeholder="Nome" />
+            <Input type="tel" placeholder="(99) 9 9999-9999" />
+          </form>
+        </div>
+
+        <div className="form-container">
+          <div className="form-header">
             <img src={gpsIconImg} alt="Ícone de um marcador de GPS" />
             <div>
               <p>Endereço de Entrega</p>
