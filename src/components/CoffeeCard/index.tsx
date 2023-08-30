@@ -31,7 +31,7 @@ export function CoffeeCard(product: ICoffeeType) {
       />
 
       <div className="coffee-card-content">
-        <p className="coffee-tag">Tradicional</p>
+        <p className="coffee-tag">{product.tipo}</p>
         <h3 className="coffee-name">{product.nome}</h3>
         <p className="coffee-description">{product.descricao}</p>
 
