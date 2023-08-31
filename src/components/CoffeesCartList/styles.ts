@@ -91,4 +91,14 @@ export const CoffeesListContainer = styled.section`
     font-weight: 700;
     color: var(--subtitle);
   }
+
+  @media (min-width: 1024px) {
+    position: absolute;
+    right: 0;
+
+    .coffees-selected {
+      padding: 2rem;
+      width: 40rem;
+    }
+  }
 `;

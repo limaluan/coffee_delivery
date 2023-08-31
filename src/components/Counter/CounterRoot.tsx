@@ -16,13 +16,13 @@ export function CounterRoot({
   return (
     <CounterContainer>
       <div className="counter">
-        <button onClick={onClickMinus}>
+        <button onClick={onClickMinus} type="button">
           <span>-</span>
         </button>
 
         <span>{quantity}</span>
 
-        <button onClick={onClickPlus}>
+        <button onClick={onClickPlus} type="button">
           <span>+</span>
         </button>
       </div>

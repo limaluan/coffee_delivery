@@ -71,8 +71,7 @@ export function CoffeesCartList() {
           <p>R$ 3,50</p>
           <p className="total">Total</p>
           <p className="total">
-            R${" "}
-            {formatPrice(
+            R$ {formatPrice(
               cartItems.reduce(
                 (total, coffee) => total + coffee.preco * coffee.quantidade,
                 3.5
@@ -81,7 +80,7 @@ export function CoffeesCartList() {
           </p>
         </div>
 
-        <button className="confirm-button" disabled={cartItems.length < 1}>
+        <button type="submit" className="confirm-button" disabled={cartItems.length < 1}>
           CONFIRMAR PEDIDO
         </button>
       </div>

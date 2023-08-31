@@ -8,6 +8,19 @@ export const CheckoutContainer = styled.main`
   width: 100%;
   padding-bottom: 10rem;
 
+  input {
+    all: unset;
+    background-color: var(--input);
+    border: 1px solid var(--button);
+
+    padding: 1.2rem;
+    border-radius: 4px;
+
+    &::placeholder {
+      color: #8d8686;
+    }
+  }
+
   .titles {
     font-size: 1.8rem;
   }
@@ -147,15 +160,11 @@ export const CheckoutContainer = styled.main`
 
   @media (min-width: 1024px) {
     flex-direction: row;
+    position: relative;
 
     .form-container,
-    .payment-container,
-    .coffees-selected {
+    .payment-container {
       padding: 2rem;
-    }
-
-    .coffees-selected {
-      width: 40rem;
     }
 
     .address-form {
@@ -194,5 +203,12 @@ export const CheckoutContainer = styled.main`
 
   @media (min-width: 1280px) {
     justify-content: space-between;
+  }
+
+  /* Hides number arrows on inputs */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 `;
