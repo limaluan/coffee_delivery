@@ -28,12 +28,8 @@ export function Header() {
           <img src={gpsIcon} alt="Ícone Gps" />
           <span>Aracaju, SE</span>
         </div>
-        <button className="cart">
-          <img
-            src={cartIcon}
-            alt="Ícone Carrinho"
-            onClick={() => navigate("checkout")}
-          />
+        <button className="cart" onClick={() => navigate("checkout")}>
+          <img src={cartIcon} alt="Ícone Carrinho" />
           {cartItems.length >= 1 && (
             <div className="cart-counter">
               <span>{cartItems.length}</span>
