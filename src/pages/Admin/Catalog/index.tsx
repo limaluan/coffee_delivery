@@ -146,7 +146,7 @@ export function Catalog() {
                     <p>{product.qtProduto}</p>
                     <p>112</p>
                     <p>R$ {formatPrice(product.preco)}</p>
-                    <p>{formatDate(product.dtCriacao)}</p>
+                    <p>{formatDate(product.dtCriacao!)}</p>
                     <p
                       className={
                         product.situacao === "ATIVO" ? "actived" : "disabled"

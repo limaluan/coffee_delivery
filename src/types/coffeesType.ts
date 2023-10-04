@@ -5,9 +5,9 @@ export interface ICoffeeType {
   preco: number;
   idProduto: number;
   imagem: string;
-  situacao: 'ATIVO' | 'INATIVO';
-  dtCriacao: string;
-  qtProduto: number;
+  situacao?: 'ATIVO' | 'INATIVO';
+  dtCriacao?: string;
+  qtProduto?: number;
 }
 
 // Type used to know Quantity of coffe on CART
