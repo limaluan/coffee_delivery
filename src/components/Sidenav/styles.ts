@@ -7,6 +7,7 @@ export const SidenavContainer = styled.div`
 
   display: flex;
   flex-direction: row-reverse;
+  z-index: 10;
 
   header {
     width: calc(100vw - 25rem);
@@ -101,8 +102,12 @@ export const SidenavContainer = styled.div`
       display: none;
     }
 
+    nav.active {
+      height: fit-content;
+    }
+
     nav {
-      width: 50vw;
+      height: 0;
 
       div {
         position: relative;
@@ -132,6 +137,8 @@ export const SidenavContainer = styled.div`
 
         &.active {
           display: flex;
+          height: 100vh;
+          border-right: 1px solid var(--input);
         }
       }
     }

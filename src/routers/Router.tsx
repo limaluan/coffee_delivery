@@ -4,7 +4,7 @@ import { AdminLayout, DefaultLayout } from "../layouts";
 import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
 import { Checkout } from "../pages/Checkout";
-import { OrderConfirmation } from "../pages/orderConfirmation";
+import { OrderConfirmation } from "../pages/OrderConfirmation";
 
 import { Orders } from "../pages/Admin/Orders";
 import { Admin } from "../pages/Admin";
