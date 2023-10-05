@@ -92,7 +92,7 @@ export const CoffeesListContainer = styled.section`
     color: var(--subtitle);
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     position: absolute;
     right: 0;
 

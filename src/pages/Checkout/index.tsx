@@ -39,6 +39,7 @@ export function Checkout() {
         className="complete-order"
         onSubmit={handleSubmit(async (data, e) => {
           e?.preventDefault();
+          console.log(data)
 
           if (!payment.method)
             return toast.error("Escolha uma forma de pagamento!", {

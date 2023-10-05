@@ -161,6 +161,8 @@ export const CheckoutContainer = styled.main`
   @media (min-width: 1024px) {
     flex-direction: row;
     position: relative;
+    flex-direction: column;
+    align-items: center;
 
     .form-container,
     .payment-container {
@@ -202,6 +204,7 @@ export const CheckoutContainer = styled.main`
   }
 
   @media (min-width: 1280px) {
+    flex-direction: row;
     justify-content: space-between;
   }
 
