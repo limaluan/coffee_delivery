@@ -74,7 +74,7 @@ Eu fui o responsável pela criação do Front-End e [Kaio Antônio](https://gith
 <p align="center">
   <figure>
     <img alt="Página Inicial do Coffee Delivery" src="https://imgur.com/82xtRKH.png" width="100%"/>
-    <figcaption>Ao tentar acessar a tela de Administrador, o usuário será redirecionado para uma tela de Login caso não tenha feito o login nenhuma vez anteriormente</figcaption>
+    <figcaption>Ao tentar acessar a tela de Administrador através da URL "/admin", o usuário será redirecionado para uma tela de Login caso não tenha feito o login nenhuma vez anteriormente</figcaption>
   </figure>
 </p>
 
