@@ -94,7 +94,7 @@ Eu fui o responsável pela criação do Front-End e [Kaio Antônio](https://gith
 
 ## 🔖 Layout
 
-Você pode visualizar o layout base do projeto através [desse link](https://www.figma.com/file/Gzz9WLcFrr3osUChYgUJFS/Coffee-Delivery?type=design&node-id=0%3A1&mode=design&t=r4zrT7NZO3m9XMnN-1). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+Você pode visualizar o layout base do projeto através [desse link](https://www.figma.com/design/Gzz9WLcFrr3osUChYgUJFS/Coffee-Delivery?node-id=0%3A1&t=1hj8ChXBnCMhU68e-1). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 <!-- ## ⌛ Features Futuras
 
